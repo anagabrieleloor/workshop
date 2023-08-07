@@ -1,6 +1,5 @@
 
 
-
 export default function ContactRow({ setSelectedContactId, contact }) {
     return (
       <tr

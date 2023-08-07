@@ -18,13 +18,14 @@ export default function ContactList({ setSelectedContactId }) {
         );
         const result = await response.json();
         setContacts(result);
+        console.log(contacts)
       } catch (error) {
         console.error(error);
       }
     }
     fetchContacts();
   }, []);
- console.log(contacts)
+ 
 
   return (
     <table>
@@ -40,8 +41,8 @@ export default function ContactList({ setSelectedContactId }) {
           <td>Phone</td>
         </tr>
         {contacts.map((contact) => {
-          return <ContactRow key={contact.id} contact={contact} />
-          return <ContactRow setSelectedContactId={setSelectedContactId}contact={contact} contactId={contactId} />
+          return <ContactRow key={contact.id} contact={contact} setSelectedContactId={setSelectedContactId}/>
+         // return <ContactRow setSelectedContactId={setSelectedContactId}contact={contact} contactId={contactId} />
           
         })}
       </tbody>

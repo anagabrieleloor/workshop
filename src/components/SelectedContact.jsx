@@ -34,6 +34,7 @@ export default function SelectedContact ({selectedContactId, setSelectedContactI
         <p>{contact.address?.street}</p>
         <p>{contact.address?.city}</p>
         <p>{contact.address?.zipcode}</p>
+        <button onClick={() => setSelectedContactId()}>Back</button>
     </div>
 </div>
   );
